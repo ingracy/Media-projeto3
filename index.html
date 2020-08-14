@@ -6,20 +6,23 @@
     <title>Media</title>
 
     <script>
-        function calcular(){
-            //1 Receber os numeros da tela 
-            let n1= document.getElementById("num1").value
-            let n2= document.getElementById("num2").value
+        calculadora = {
+            n1 = 0,
+            n2 = 0,
+            media: function (){
+                return this.parseFloat(n1) + this.parseFloat(n2)/ 2
+            }
+
+        }
+        controle = {
+            lerDados : function (){
+                let n1= document.getElementById("num1").value
+                let n2= document.getElementById("num2").value
+                return {n1,n2}
+            }
             
-            //2 Somar dois numeros 
-            let somar = parseFloat(n1) + parseFloat(n2);
-
-            //3 Dividir a soma por 2
-            let media = somar/2
-
-
-            //4 Imprimir o resultado
-           alert(media);
+            
+            
         }
     </script>
 </head>
